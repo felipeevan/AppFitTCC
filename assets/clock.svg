@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="23" viewBox="0 0 23 23">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00c6fb"/>
+      <stop offset="1" stop-color="#005bea"/>
+    </linearGradient>
+  </defs>
+  <g id="clock" transform="translate(-0.001)">
+    <g id="Group_4" data-name="Group 4" transform="translate(0.001)">
+      <path id="Path_1520" data-name="Path 1520" d="M11.5,0A11.5,11.5,0,1,0,23,11.5,11.5,11.5,0,0,0,11.5,0Zm.794,12.906a.775.775,0,0,1-.009.091c0,.023,0,.046-.01.068s-.014.046-.021.069a.813.813,0,0,1-.029.082s0,.01,0,.014a.788.788,0,0,1-.059.1l0,.006a.792.792,0,0,1-.084.1l-.026.024a.761.761,0,0,1-.084.069l-.027.02a.8.8,0,0,1-.119.065l-.027.01a.8.8,0,0,1-.107.033l-.039.008a.792.792,0,0,1-.143.014c-.01,0-.02,0-.029,0a.8.8,0,0,1-.136-.015c-.014,0-.027-.009-.041-.013a.807.807,0,0,1-.119-.041l-.013,0-4.41-2.08a.8.8,0,1,1,.678-1.439l3.275,1.544V4.772a.8.8,0,1,1,1.591,0v8.119h0S12.295,12.9,12.295,12.906Z" transform="translate(-0.001)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

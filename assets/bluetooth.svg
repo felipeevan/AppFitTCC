@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.74" height="22.021" viewBox="0 0 11.74 22.021">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00c6fb"/>
+      <stop offset="1" stop-color="#005bea"/>
+    </linearGradient>
+  </defs>
+  <path id="bluetooth_1_" data-name="bluetooth (1)" d="M25.746,6.209,18.714,0V7.985L15.563,4.834,14.006,6.391l4.436,4.436-4.436,4.436,1.557,1.557,3.151-3.151v8.352l7.032-7-4.228-4.228ZM20.916,17V13.3l1.776,1.777ZM22.693,6.27,20.916,8.194v-3.7Z" transform="translate(-14.006)" fill="url(#linear-gradient)"/>
+</svg>

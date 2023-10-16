@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.088" height="20" viewBox="0 0 23.088 20">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00c6fb"/>
+      <stop offset="1" stop-color="#005bea"/>
+    </linearGradient>
+  </defs>
+  <g id="valentines-heart" transform="translate(0 -32.952)">
+    <g id="Icons_18_" transform="translate(0 32.952)">
+      <path id="Path_1519" data-name="Path 1519" d="M23.088,39.187a6.23,6.23,0,0,0-11.544-3.256,6.23,6.23,0,1,0-9.4,7.95l8.835,8.835a.8.8,0,0,0,1.138,0l8.835-8.835A6.212,6.212,0,0,0,23.088,39.187Z" transform="translate(0 -32.952)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
