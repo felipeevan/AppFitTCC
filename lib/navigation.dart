@@ -37,8 +37,7 @@ class _TabsState extends State<Navigation> with SingleTickerProviderStateMixin{
     return Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
-          child:
-          TabBarView(
+          child: TabBarView(
               controller: _tabController,
               children: _tabList,
               physics: const NeverScrollableScrollPhysics()

@@ -40,42 +40,47 @@ class _Tela2State extends State<Tela2> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(((kms * 10).truncate() / 10).toString(), style: const TextStyle(color: Colors.white, fontSize: 90, fontWeight: FontWeight.w600, height: 0.9),),
-              const SizedBox(width: 15,),
-              const Text("km", style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.w500),),
-            ],
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: ((kms * 10).truncate() / 10).toString(),
+                  style: TextStyle(color: Colors.white, fontSize: 90, fontWeight: FontWeight.w600),
+                ),
+                const TextSpan(
+                  text: " km",
+                  style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Column(
+              Expanded(child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset("assets/clock.svg", height: 30, width: 30,),
                   const SizedBox(height: 5,),
                   Text(printDuration(tempo), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),)
                 ],
-              ),
-              Column(
+              ),),
+              Expanded(child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset("assets/fire.svg", height: 30, width: 30,),
                   const SizedBox(height: 5,),
                   Text("${kcal.toStringAsFixed(0)} kcal", style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),)
                 ],
-              ),
-              Column(
+              ),),
+              Expanded(child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset("assets/valentines-heart.svg", height: 30, width: 30,),
                   const SizedBox(height: 5,),
                   const Text("-", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),)
                 ],
-              )
+              ))
             ],
           ),
           Row(
@@ -97,10 +102,13 @@ class _Tela2State extends State<Tela2> {
                   });
                 },
                 style: ElevatedButton.styleFrom(
-                  shape: const CircleBorder(),
-                  padding: EdgeInsets.zero
+                    shape: const CircleBorder(),
+                    padding: EdgeInsets.zero
                 ),
-                child: SvgPicture.asset("assets/play.svg", width: 130,),
+                child: Semantics(
+                  label: "Começar Corrida",
+                  child: SvgPicture.asset("assets/play.svg", width: 130,),
+                ),
               ),
               ElevatedButton(
                 onPressed: () {
@@ -110,7 +118,10 @@ class _Tela2State extends State<Tela2> {
                     shape: CircleBorder(),
                     padding: EdgeInsets.zero
                 ),
-                child: SvgPicture.asset("assets/stop.svg", width: 130,),
+                child: Semantics(
+                  label: "Sair da Corrida",
+                  child: SvgPicture.asset("assets/stop.svg", width: 130,),
+                ),
               )
             ]:[
               ElevatedButton(
@@ -124,8 +135,11 @@ class _Tela2State extends State<Tela2> {
                     shape: CircleBorder(),
                     padding: EdgeInsets.zero
                 ),
-                child: SvgPicture.asset("assets/pause.svg", width: 130,),
-              )
+                child: Semantics(
+                  label: "Pausar Corrida",
+                  child: SvgPicture.asset("assets/pause.svg", width: 130,),
+                ),
+              ),
             ],
           )
         ],

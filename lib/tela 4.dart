@@ -35,9 +35,12 @@ class _Tela4State extends State<Tela4> {
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           leading: IconButton(
-            icon: SvgPicture.asset(
-              'assets/seta.svg',
-              width: 40,
+            icon: Semantics(
+              label: "Voltar à tela anterior",
+              child: SvgPicture.asset(
+                'assets/seta.svg',
+                width: 40,
+              ),
             ),
             onPressed: () => Navigator.of(context).pop(),
           ),
@@ -108,35 +111,27 @@ class InformacaoItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                titulo,
-                style: const TextStyle(
-                  fontSize: 50,
-                  height: 1.1,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xc9333333),
-                ),
+          RichText(
+            text: TextSpan(
+              text: titulo,
+              style: const TextStyle(
+                fontSize: 50,
+                height: 1.1,
+                fontWeight: FontWeight.bold,
+                color: Color(0xc9333333),
               ),
-              textoAuxiliar!=null?Row(
-                children: [
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    textoAuxiliar!,
+              children: <TextSpan>[
+                if (textoAuxiliar != null)
+                  TextSpan(
+                    text: ' $textoAuxiliar',
                     style: const TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Color(0xc9333333),
                     ),
                   ),
-                ],
-              ):Container()
-            ],
+              ],
+            ),
           ),
           Text(subtitulo,
             style: TextStyle(fontWeight: FontWeight.w400, fontSize: 25, color: Color(0xc9333333)),
